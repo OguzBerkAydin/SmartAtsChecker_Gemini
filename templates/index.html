@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart ATS</title>
+</head>
+<body>
+    <h1>Smart ATS</h1>
+    <p>Improve Your Resume ATS</p>
+    
+    <form action="/" method="POST" enctype="multipart/form-data">
+        <label for="jd">Paste the Job Description</label><br>
+        <textarea id="jd" name="jd" rows="10" cols="50"></textarea><br>
+        <label for="resume">Upload Your Resume (PDF)</label><br>
+        <input type="file" id="resume" name="resume" accept=".pdf"><br><br>
+        <button type="submit">Submit</button>
+    </form>
+    
+    {% if response %}
+    <h2>Response</h2>
+    <pre>{{ response }}</pre>
+    {% endif %}
+</body>
+</html>
